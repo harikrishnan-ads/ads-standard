@@ -3,6 +3,12 @@
 **Status:** Public Draft (v0.1)  
 **Author / Steward:** Harikrishnan V S (Independent)
 
+## Full Specification
+
+The full ADS v1.0 specification is available in the `docs` folder:
+
+[ADS v1 Public Draft](docs/ADS_v1_Public_Draft.md)
+
 ADS is an open, interoperable data standard proposed to improve how agricultural IoT data is produced, exchanged, and reused in India.
 
 This repository hosts the initial public draft of ADS. It is shared early and intentionally to invite feedback, critique, and experimentation.
