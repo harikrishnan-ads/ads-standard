@@ -1,0 +1,12 @@
+# CBOR example from device
+{
+  "device_id": "D-001",
+  "ads_version": "1.0",
+  "timestamp": 1675000000,
+  "sequence_number": 12,
+  "sensor_payload": {
+     "1": 45,   # soil_moisture %
+     "2": 32,   # temperature °C
+     "4": 88    # humidity %
+  }
+}
