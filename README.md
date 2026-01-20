@@ -59,7 +59,9 @@ flowchart TD
 
     I -->|Optional Commands| B
     B -->|Actuation| A
-    
+
+---
+
 ## What ADS is (and is not)
 
 **ADS is:**
