@@ -1,28 +1,65 @@
-# Agricultural Data Standard (ADS) – Public Draft
+# Agricultural Data Standard (ADS)
+
+**An open, interoperable data standard for agricultural IoT systems in India**
 
 **Status:** Public Draft (v0.1)  
-**Author / Steward:** Harikrishnan V S (Independent)
+**Author / Steward:** Harikrishnan V S  
 
-## Full Specification
+---
 
-The full ADS v1.0 specification is available in the `docs` folder:
+## What is ADS?
 
-[ADS v1 Public Draft](docs/ADS_v1_Public_Draft.md)
+The **Agricultural Data Standard (ADS)** is an open specification that defines **how agricultural IoT data should be structured, transported, and shared** across devices, gateways, cloud platforms, and government systems.
 
-ADS is an open, interoperable data standard proposed to improve how agricultural IoT data is produced, exchanged, and reused in India.
-
-This repository hosts the initial public draft of ADS. It is shared early and intentionally to invite feedback, critique, and experimentation.
+ADS does not prescribe hardware, vendors, or business models.  
+It defines a **common data language** so that agricultural data collected in the field can be reused reliably for analytics, AI/ML, and public programs.
 
 ---
 
 ## Why ADS exists
 
-Agricultural data in India is already being generated at scale — by sensors, gateways, satellites, mobile apps, and government systems. However, most of this data remains siloed due to incompatible formats and vendor-specific pipelines.
+Today, agricultural data in India is fragmented:
 
-ADS attempts to define a common, lightweight data contract that works under real field constraints.
+- Each device vendor uses different data formats  
+- Integration across platforms is expensive and fragile  
+- Government programs struggle to combine datasets  
+- AI/ML models suffer due to inconsistent or low-quality inputs  
+
+At the same time, Indian farms operate under real constraints:
+- Low power devices
+- Intermittent connectivity
+- Long deployment lifetimes
+- Highly diverse crops and regions
+
+ADS exists to solve **this practical interoperability gap**, starting from the field and working upward.
 
 ---
 
+## How ADS works (high-level architecture)
+
+The diagram below shows how ADS connects field devices, gateways, cloud platforms, government systems, and AI/ML models in a reliable and interoperable way.
+
+```mermaid
+flowchart TD
+    A[ADS Device<br/>Sensors / Actuators] -->|CBOR Payloads| B[ADS Gateway]
+
+    B -->|Validate & Normalize| C[Local Buffer]
+    C -->|Store & Forward| D{Internet Available?}
+
+    D -->|Yes| E[Cloud / Platform Ingestion]
+    D -->|No| C
+
+    E --> F[Government Systems<br/>AgriStack / ICAR / State Platforms]
+    E --> G[Private Platforms<br/>AgriTech / Analytics]
+
+    F --> H[AI / ML Models]
+    G --> H
+
+    H --> I[Insights & Decisions]
+
+    I -->|Optional Commands| B
+    B -->|Actuation| A
+    
 ## What ADS is (and is not)
 
 **ADS is:**
