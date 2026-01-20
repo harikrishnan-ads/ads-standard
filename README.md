@@ -41,25 +41,25 @@ The diagram below shows how ADS connects field devices, gateways, cloud platform
 
 ```mermaid
 flowchart TD
-    A[ADS Device<br/>Sensors / Actuators] -->|CBOR Payloads| B[ADS Gateway]
+    A["ADS Device<br/>Sensors / Actuators"] -->|CBOR Payloads| B["ADS Gateway"]
 
-    B -->|Validate & Normalize| C[Local Buffer]
-    C -->|Store & Forward| D{Internet Available?}
+    B -->|Validate & Normalize| C["Local Buffer"]
+    C -->|Store & Forward| D{"Internet Available?"}
 
-    D -->|Yes| E[Cloud / Platform Ingestion]
+    D -->|Yes| E["Cloud / Platform Ingestion"]
     D -->|No| C
 
-    E --> F[Government Systems<br/>AgriStack / ICAR / State Platforms]
-    E --> G[Private Platforms<br/>AgriTech / Analytics]
+    E --> F["Government Systems<br/>AgriStack / ICAR / State Platforms"]
+    E --> G["Private Platforms<br/>AgriTech / Analytics"]
 
-    F --> H[AI / ML Models]
+    F --> H["AI / ML Models"]
     G --> H
 
-    H --> I[Insights & Decisions]
+    H --> I["Insights & Decisions"]
 
     I -->|Optional Commands| B
     B -->|Actuation| A
-
+    
 ---
 
 ## What ADS is (and is not)
