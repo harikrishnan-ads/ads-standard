@@ -39,6 +39,7 @@ ADS exists to solve **this practical interoperability gap**, starting from the f
 
 The diagram below shows how ADS connects field devices, gateways, cloud platforms, government systems, and AI/ML models in a reliable and interoperable way.
 
+
 ```mermaid
 flowchart TD
     A["ADS Device<br/>Sensors / Actuators"] -->|CBOR Payloads| B["ADS Gateway"]
@@ -59,7 +60,8 @@ flowchart TD
 
     I -->|Optional Commands| B
     B -->|Actuation| A
-    
+
+
 ---
 
 ## What ADS is (and is not)
