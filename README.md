@@ -60,7 +60,7 @@ flowchart TD
 
     I -->|Optional Commands| B
     B -->|Actuation| A
-
+```
 
 ---
 
