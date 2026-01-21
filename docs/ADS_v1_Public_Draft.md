@@ -65,6 +65,7 @@ ADS ensures longevity by:
 - Maintaining a stable and backward-compatible Field Registry
 
 These principles allow devices to remain functional across changing connectivity conditions, evolving government programs, and platform migrations, without requiring frequent firmware updates or physical replacement.
+
 ---
 
 ## 3. Terminology & System Roles
