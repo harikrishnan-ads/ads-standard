@@ -52,6 +52,19 @@ ADS v1 is guided by the following principles:
 - **Extensible**: Supports evolution without breaking deployed systems
 - **India-centric**: Aligned with Indian agricultural and digital public infrastructure needs
 
+### Long Deployment Lifetimes
+
+ADS v1 is designed to support agricultural IoT deployments that remain operational for many years with minimal maintenance. Long deployment lifetimes are achieved through protocol and system design choices rather than hardware assumptions.
+
+ADS ensures longevity by:
+- Defining a minimal and stable device data contract that changes infrequently
+- Shifting evolution and complexity to gateways instead of field devices
+- Enforcing strict backward compatibility within major versions
+- Supporting offline operation and store-and-forward data delivery
+- Avoiding hard dependencies on specific network technologies or vendors
+- Maintaining a stable and backward-compatible Field Registry
+
+These principles allow devices to remain functional across changing connectivity conditions, evolving government programs, and platform migrations, without requiring frequent firmware updates or physical replacement.
 ---
 
 ## 3. Terminology & System Roles
