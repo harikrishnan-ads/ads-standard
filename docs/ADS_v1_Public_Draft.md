@@ -77,6 +77,18 @@ These principles allow devices to remain functional across changing connectivity
 
 ---
 
+## Non-Prescriptive Architecture Notice
+
+ADS defines logical system roles (such as **ADS Device**, **ADS Gateway**, and **Upstream Systems**) solely for the purpose of establishing data responsibilities, interoperability boundaries, and trust domains.
+
+These roles **do not prescribe or mandate** any specific physical architecture, hardware configuration, network topology, or deployment model. Implementers are free to realize these roles in a distributed, consolidated, virtualized, or embedded manner, based on operational, economic, or environmental constraints.
+
+Multiple ADS roles MAY coexist within a single physical system, or a single role MAY be implemented across multiple systems. ADS does not assume or require a particular separation of compute, storage, or networking components.
+
+This role-based abstraction ensures long-term interoperability and clarity of responsibility without constraining innovation or deployment choices.
+
+---
+
 # 4. ADS v1 – Gateway Compliance Requirements
 
 ## 4.1 Purpose
